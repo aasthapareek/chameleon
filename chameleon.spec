@@ -54,7 +54,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='WAFBypass',
+    name='Chameleon',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

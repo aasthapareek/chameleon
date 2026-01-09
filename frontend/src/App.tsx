@@ -231,7 +231,7 @@ function ProjectSelector({ onSelect }: { onSelect: (name: string) => void }) {
     <div className="h-screen bg-[#1e1e1e] flex items-center justify-center">
       <div className="bg-[#252526] border border-[#3c3c3c] rounded-lg shadow-2xl w-[500px] max-h-[600px] overflow-hidden">
         <div className="p-4 border-b border-[#3c3c3c]">
-          <h1 className="text-xl font-bold text-[#e06c00]">WAF Bypass Proxy</h1>
+          <h1 className="text-xl font-bold text-[#e06c00]">Chameleon</h1>
           <p className="text-xs text-[#6e6e6e] mt-1">Select or create a project to get started</p>
         </div>
 

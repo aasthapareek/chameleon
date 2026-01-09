@@ -1,5 +1,5 @@
 """
-Build script for WAF Bypass Proxy standalone exe.
+Build script for Chameleon standalone exe.
 Run this to:
 1. Build React frontend
 2. Bundle everything with PyInstaller
@@ -25,7 +25,7 @@ def run(cmd, cwd=None):
 
 def main():
     print("=" * 50)
-    print("WAF Bypass Proxy - Build Script")
+    print("Chameleon - Build Script")
     print("=" * 50)
 
     # Step 1: Build frontend
@@ -45,12 +45,12 @@ def main():
 
     # Step 4: Run PyInstaller
     print("\n[4/4] Building executable...")
-    spec_file = os.path.join(ROOT_DIR, "waf_bypass.spec")
+    spec_file = os.path.join(ROOT_DIR, "chameleon.spec")
     run(f"pyinstaller --clean --noconfirm {spec_file}", cwd=ROOT_DIR)
 
     print("\n" + "=" * 50)
     print("BUILD COMPLETE!")
-    print(f"Executable: {os.path.join(DIST_DIR, 'WAFBypass.exe')}")
+    print(f"Executable: {os.path.join(DIST_DIR, 'Chameleon.exe')}")
     print("=" * 50)
 
 if __name__ == "__main__":

@@ -231,7 +231,7 @@ if __name__ == "__main__":
     import webbrowser
     import threading
     
-    print("Starting WAF Bypass Proxy server...")
+    print("Starting Chameleon server...")
     print()
     print("=" * 50)
     print("  Open your browser to: http://localhost:8000")
