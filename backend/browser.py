@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 def ensure_browser_installed():
     """Check if Playwright browser is installed, download if not."""
     print("=" * 50)
-    print("WAF Bypass Proxy - Initializing...")
+    print("Chameleon - Initializing...")
     print("=" * 50)
     
     # Standard browser location

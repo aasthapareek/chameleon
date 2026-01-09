@@ -296,7 +296,7 @@ function ProjectSelector({ onSelect }: { onSelect: (name: string) => void }) {
                 <div className="p-8 text-center text-[#6e6e6e]">
                   <FolderOpen size={32} className="mx-auto mb-2 opacity-50" />
                   <div>No projects yet</div>
-                  <div className="text-[10px] mt-1">Projects are saved to D:/WAFBypassProjects/</div>
+                  <div className="text-[10px] mt-1">Projects are saved to D:/ChameleonProjects/</div>
                 </div>
               ) : (
                 projects.map(p => (

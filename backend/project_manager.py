@@ -5,7 +5,7 @@ from typing import List, Optional
 from pydantic import BaseModel
 
 # Project storage location
-PROJECTS_DIR = "D:/WAFBypassProjects"
+PROJECTS_DIR = "D:/ChameleonProjects"
 
 class ExclusionRule(BaseModel):
     type: str  # 'domain', 'url', 'regex'
