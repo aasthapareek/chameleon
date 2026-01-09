@@ -198,16 +198,21 @@ async def websocket_endpoint(websocket: WebSocket):
 # --- Static File Serving (for bundled exe) ---
 # Check if running from bundled exe
 def get_static_dir():
+    # If explicitly in backend, look there first
+    base = os.path.dirname(os.path.abspath(__file__))
+    static_in_backend = os.path.join(base, 'static')
+    
+    if os.path.exists(os.path.join(static_in_backend, 'index.html')):
+        print(f"[DEBUG] Serving from backend/static: {static_in_backend}")
+        return static_in_backend
+        
     if getattr(sys, 'frozen', False):
-        # Running as bundled exe
         path = os.path.join(sys._MEIPASS, 'static')
-        print(f"[DEBUG] Running as bundled exe, static dir: {path}")
         return path
     else:
-        # Running in development
-        base = os.path.dirname(__file__)
-        path = os.path.join(base, '..', 'frontend', 'dist')
-        print(f"[DEBUG] Running in dev mode, static dir: {path}")
+        # Fallback to frontend/dist for dev
+        path = os.path.normpath(os.path.join(base, '..', 'frontend', 'dist'))
+        print(f"[DEBUG] Falling back to frontend/dist: {path}")
         return path
 
 static_dir = get_static_dir()
